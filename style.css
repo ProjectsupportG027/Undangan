@@ -13,23 +13,29 @@ html{
 }
 
 body{
-    font-family: "Segoe UI", sans-serif;
-    overflow-x:hidden;
-    background:#f8f8f8;
-}
 
+    font-family:'Poppins',sans-serif;
+
+    background:#ffffff;
+
+    overflow-x:hidden;
+
+}
 
 /* ==========================================
    COVER
 ========================================== */
 
 #cover{
+
     position:relative;
+
     width:100%;
     height:100vh;
-    overflow:hidden;
-}
 
+    overflow:hidden;
+
+}
 
 /* ==========================================
    BACKGROUND
@@ -38,6 +44,7 @@ body{
 .cover-background{
 
     position:absolute;
+
     top:0;
     left:0;
 
@@ -49,8 +56,8 @@ body{
     background-position:center;
 
     animation:zoomBackground 25s linear infinite;
-}
 
+}
 
 /* ==========================================
    OVERLAY
@@ -59,12 +66,12 @@ body{
 .overlay{
 
     position:absolute;
+
     inset:0;
 
     background:rgba(0,0,0,.45);
 
 }
-
 
 /* ==========================================
    CONTENT
@@ -73,68 +80,81 @@ body{
 .cover-content{
 
     position:relative;
+
     z-index:10;
 
+    width:100%;
     height:100%;
 
     display:flex;
+
     flex-direction:column;
 
     justify-content:center;
+
     align-items:center;
 
     text-align:center;
 
-    color:white;
+    color:#ffffff;
 
     padding:20px;
 
 }
 
-
 /* ==========================================
-   TEXT
+   TITLE
 ========================================== */
 
 .subtitle{
 
-    letter-spacing:5px;
-    font-size:14px;
+    font-size:13px;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    opacity:.9;
 
     margin-bottom:15px;
 
-    opacity:.9;
 }
 
 .title{
 
-    font-size:52px;
-    font-weight:700;
+    font-family:'Cormorant Garamond',serif;
 
-    text-shadow:0 3px 12px rgba(0,0,0,.5);
+    font-size:72px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-shadow:0 5px 15px rgba(0,0,0,.5);
 
 }
 
 .love{
 
-    font-size:42px;
+    font-size:40px;
 
-    color:#ffd700;
+    color:#FFD700;
 
-    margin:10px 0;
+    margin:12px 0;
 
 }
 
 .date{
 
-    margin-top:20px;
+    margin-top:25px;
 
     font-size:18px;
 
-    letter-spacing:2px;
+    color:#FFE9A8;
+
+    letter-spacing:3px;
 
 }
-
 
 /* ==========================================
    GUEST
@@ -144,33 +164,33 @@ body{
 
     margin-top:45px;
 
-    padding:20px 35px;
+    width:350px;
 
-    border:1px solid rgba(255,255,255,.3);
+    padding:20px;
 
     border-radius:15px;
 
+    border:1px solid rgba(255,255,255,.35);
+
     background:rgba(255,255,255,.12);
 
-    backdrop-filter:blur(8px);
+    backdrop-filter:blur(10px);
 
 }
 
 .guest-box p{
 
-    margin-bottom:8px;
+    font-size:15px;
 
-    font-size:14px;
+    margin-bottom:10px;
 
 }
 
 .guest-box h3{
 
     font-size:22px;
-    font-weight:600;
 
 }
-
 
 /* ==========================================
    BUTTON
@@ -178,50 +198,51 @@ body{
 
 #openInvitation{
 
-    margin-top:35px;
+    margin-top:40px;
 
-    padding:15px 38px;
+    padding:16px 42px;
 
     border:none;
 
-    border-radius:50px;
+    border-radius:60px;
 
     cursor:pointer;
 
-    font-size:18px;
+    font-size:17px;
 
-    background:#d4af37;
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    background:linear-gradient(135deg,#d4af37,#f6d365);
 
     color:white;
 
-    transition:.35s;
+    transition:.4s;
 
-    box-shadow:0 0 20px rgba(212,175,55,.45);
+    box-shadow:0 12px 35px rgba(212,175,55,.35);
 
 }
 
 #openInvitation:hover{
 
-    transform:translateY(-4px);
+    transform:translateY(-5px) scale(1.03);
 
-    background:#f1c84c;
-
-    box-shadow:0 0 35px rgba(255,215,0,.8);
+    box-shadow:0 18px 45px rgba(255,215,0,.5);
 
 }
 
-
 /* ==========================================
-   MAIN
+   MAIN CONTENT
 ========================================== */
 
 #mainContent{
 
     min-height:100vh;
 
-    background:white;
+    background:#ffffff;
 
-    padding:100px 30px;
+    padding:80px 30px;
 
 }
 
@@ -237,9 +258,9 @@ body{
 
 .placeholder h2{
 
-    margin-bottom:20px;
+    font-size:40px;
 
-    font-size:38px;
+    margin-bottom:20px;
 
 }
 
@@ -247,10 +268,9 @@ body{
 
     font-size:18px;
 
-    color:#666;
+    color:#666666;
 
 }
-
 
 /* ==========================================
    ANIMATION
@@ -271,7 +291,6 @@ body{
     }
 
 }
-
 
 /* ==========================================
    RESPONSIVE
@@ -310,5 +329,15 @@ body{
         width:100%;
 
     }
+
+}
+
+/* ==========================================
+   FADE
+========================================== */
+
+#cover{
+
+    transition:1.2s;
 
 }
