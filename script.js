@@ -1,4 +1,3 @@
-alert("script.js berhasil dimuat");
 /* ==========================================
    ELEMENT
 ========================================== */
@@ -9,57 +8,44 @@ const music = document.getElementById("bgMusic");
 const mainContent = document.getElementById("mainContent");
 const guestName = document.getElementById("guestName");
 
-
 /* ==========================================
    AMBIL NAMA TAMU DARI URL
 ========================================== */
 
 const params = new URLSearchParams(window.location.search);
-
 const namaTamu = params.get("to");
 
-if(namaTamu){
-
-    guestName.innerHTML = decodeURIComponent(namaTamu);
-
+if (namaTamu) {
+    guestName.textContent = decodeURIComponent(namaTamu);
 }
-
 
 /* ==========================================
    BUKA UNDANGAN
 ========================================== */
 
-openButton.addEventListener("click", function(){
+openButton.addEventListener("click", function () {
 
     alert("Tombol berhasil diklik!");
 
-});
+    music.play()
+    .then(() => {
+        console.log("Music Playing");
+    })
+    .catch((err) => {
+        console.error(err);
+        alert("Audio Error : " + err.message);
+    });
 
-    // Putar musik
-  music.play()
-.then(() => {
-    console.log("Music Playing");
-})
-.catch((err) => {
-    console.error("Audio Error:", err);
-    alert("Audio Error : " + err.message);
-});
-
-    // Efek fade
     cover.style.opacity = "0";
 
-    cover.style.transition = "1.2s";
-
-    setTimeout(function(){
+    setTimeout(function () {
 
         cover.style.display = "none";
 
         mainContent.scrollIntoView({
-
-            behavior:"smooth"
-
+            behavior: "smooth"
         });
 
-    },1200);
+    }, 1200);
 
 });
