@@ -1,0 +1,314 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: "Segoe UI", sans-serif;
+    overflow-x:hidden;
+    background:#f8f8f8;
+}
+
+
+/* ==========================================
+   COVER
+========================================== */
+
+#cover{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+.cover-background{
+
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background-image:url("assets/images/cover.png");
+    background-size:cover;
+    background-position:center;
+
+    animation:zoomBackground 25s linear infinite;
+}
+
+
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.cover-content{
+
+    position:relative;
+    z-index:10;
+
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.subtitle{
+
+    letter-spacing:5px;
+    font-size:14px;
+
+    margin-bottom:15px;
+
+    opacity:.9;
+}
+
+.title{
+
+    font-size:52px;
+    font-weight:700;
+
+    text-shadow:0 3px 12px rgba(0,0,0,.5);
+
+}
+
+.love{
+
+    font-size:42px;
+
+    color:#ffd700;
+
+    margin:10px 0;
+
+}
+
+.date{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    letter-spacing:2px;
+
+}
+
+
+/* ==========================================
+   GUEST
+========================================== */
+
+.guest-box{
+
+    margin-top:45px;
+
+    padding:20px 35px;
+
+    border:1px solid rgba(255,255,255,.3);
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(8px);
+
+}
+
+.guest-box p{
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+}
+
+.guest-box h3{
+
+    font-size:22px;
+    font-weight:600;
+
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+#openInvitation{
+
+    margin-top:35px;
+
+    padding:15px 38px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    background:#d4af37;
+
+    color:white;
+
+    transition:.35s;
+
+    box-shadow:0 0 20px rgba(212,175,55,.45);
+
+}
+
+#openInvitation:hover{
+
+    transform:translateY(-4px);
+
+    background:#f1c84c;
+
+    box-shadow:0 0 35px rgba(255,215,0,.8);
+
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+#mainContent{
+
+    min-height:100vh;
+
+    background:white;
+
+    padding:100px 30px;
+
+}
+
+.placeholder{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.placeholder h2{
+
+    margin-bottom:20px;
+
+    font-size:38px;
+
+}
+
+.placeholder p{
+
+    font-size:18px;
+
+    color:#666;
+
+}
+
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes zoomBackground{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        transform:scale(1.15);
+
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .title{
+
+        font-size:34px;
+
+    }
+
+    .love{
+
+        font-size:28px;
+
+    }
+
+    .guest-box{
+
+        width:100%;
+
+        padding:18px;
+
+    }
+
+    .guest-box h3{
+
+        font-size:18px;
+
+    }
+
+    #openInvitation{
+
+        width:100%;
+
+    }
+
+}
