@@ -1,4 +1,3 @@
-alert("script.js berhasil dimuat");
 /* ==========================================
    ELEMENT
 ========================================== */
@@ -31,11 +30,24 @@ if(namaTamu){
 
 openButton.addEventListener("click", function(){
 
-  music.play()
-.then(() => {
-    console.log("Music Playing");
-})
-.catch((err) => {
-    console.error("Audio Error:", err);
-    alert("Audio Error : " + err.message);
+    // Putar musik
+    music.play();
+
+    // Efek fade
+    cover.style.opacity = "0";
+
+    cover.style.transition = "1.2s";
+
+    setTimeout(function(){
+
+        cover.style.display = "none";
+
+        mainContent.scrollIntoView({
+
+            behavior:"smooth"
+
+        });
+
+    },1200);
+
 });
