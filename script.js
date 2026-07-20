@@ -31,6 +31,10 @@ if(namaTamu){
 
 openButton.addEventListener("click", function(){
 
+    alert("Tombol berhasil diklik!");
+
+});
+
     // Putar musik
   music.play()
 .then(() => {
