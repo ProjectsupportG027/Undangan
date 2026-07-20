@@ -32,7 +32,14 @@ if(namaTamu){
 openButton.addEventListener("click", function(){
 
     // Putar musik
-    music.play();
+  music.play()
+.then(() => {
+    console.log("Music Playing");
+})
+.catch((err) => {
+    console.error("Audio Error:", err);
+    alert("Audio Error : " + err.message);
+});
 
     // Efek fade
     cover.style.opacity = "0";
